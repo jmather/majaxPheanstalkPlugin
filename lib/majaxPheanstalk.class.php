@@ -13,5 +13,23 @@ class majaxPheanstalk {
     }
     return self::$conn;
   }
+
+  public static function addJob($tube, $job_data)
+  {
+    $p = self::getInstance();
+    $p->useTube($tube)->addJob($job_data);
+  }
+
+  public static function getJob($tube)
+  {
+    $p = self::getInstance();
+    return $p->watch($tube)->ignore('default')->reserve();
+  }
+
+  public static function deleteJob($job)
+  {
+    $p = self::getInstance();
+    return $p->delete($job);
+  }
 }
 
