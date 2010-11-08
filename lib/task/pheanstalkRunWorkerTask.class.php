@@ -6,7 +6,7 @@ class pheanstalkRunWorkerTask extends sfBaseTask
   {
     // add your own arguments here
     $this->addArguments(array(
-      new sfCommandOption('application', null, sfCommandOption::REQUIRED, 'The application name'),
+      new sfCommandArgument('application', sfCommandArgument::REQUIRED, 'The application name'),
       new sfCommandArgument('worker_class', sfCommandArgument::REQUIRED, 'Worker Class'),
       new sfCommandArgument('log_path', sfCommandArgument::REQUIRED, 'Log Path'),
     ));
@@ -39,6 +39,9 @@ EOF;
     $worker_class = $arguments['worker_class'];
     $log_path = $arguments['log_path'];
     $thread = new $worker_class($log_path);
+    if (!($thread instanceof majaxPheanstalkWorkerThread))
+      throw new InvalidArgumentException('Class supplied was not a majaxPheanstalkWorkerThread child');
+
     $thread->run();
   }
 }

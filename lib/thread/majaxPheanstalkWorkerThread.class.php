@@ -57,6 +57,11 @@ abstract class majaxPheanstalkWorkerThread {
     return $this->pheanstalk->delete($job);
   }
 
+  protected function buryJob($job)
+  {
+    return $this->pheanstalk->bury($job);
+  }
+
   private function log($txt) {
     file_put_contents($this->path . '/worker.txt', $txt . "\n", FILE_APPEND);
   }
