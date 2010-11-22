@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>majaxPheanstalkPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Tools for integrating with Beanstalkd from within Symfony</summary>
+ <description>Tools for integrating with Beanstalkd from within Symfony</description>
+ <lead>
+  <name>JMather</name>
+  <user>JMather</user>
+  <email>jmather@itsmajax.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-11-22</date>
+ <time>13:07:53</time>
+ <version>
+  <release>1.0.0</release>
+  <api>1.0.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+ <notes>
+Initial release
+ </notes>
+ <contents>
+  <dir baseinstalldir="/dev/null" name="/">
+   <file baseinstalldir="/dev/null" md5sum="0d5889ee6c1d254433a8813b5a62e8fc" name="config/majaxPheanstalkPluginConfiguration.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="a044581fbe087ef1143076812457be85" name="lib/majaxPheanstalk.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="761e2dfcf0d037164c21231df75c0eec" name="lib/task/pheanstalkRunWorkerTask.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="f763e73d7c51ea534379878cd496d73f" name="lib/task/pheanstalkStatsTask.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="adb6bb7825d9627a19deeff7f55a1eb7" name="lib/task/pheanstalkTubesTask.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="a1a71909b75b76714a0da871446f6c14" name="lib/task/pheanstalkTubeTask.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="73b0c2113132195d5ff78699b855e14e" name="lib/thread/ExampleWorkerThread.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="3a84d155913dff9c387632e6ee9027f3" name="lib/thread/majaxPheanstalkWorkerThread.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="9ac2c832a5888e6dd59b69a2060b91c4" name="test/bin/prove.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="522f689e3a0a0c40ec0370d52c47a505" name="test/bootstrap/functional.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="660eee4c981c97ab08174894b28ec73f" name="test/bootstrap/unit.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="ec0244c82ba8f52899e48b4e473f78e8" name="test/fixtures/project/symfony" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="f41593e40a97733e17f41b71a139bec8" name="test/fixtures/project/apps/frontend/config/app.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="a57e05bc507e8b528e19b8c40d9c0095" name="test/fixtures/project/apps/frontend/config/cache.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="a88ede767c3029a8a089b6cefc0ec057" name="test/fixtures/project/apps/frontend/config/factories.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="7e83763cc5fc6e227c2c5e7e5facf9d5" name="test/fixtures/project/apps/frontend/config/filters.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="1b1e5eb069c9708079653452d6b5c559" name="test/fixtures/project/apps/frontend/config/frontendConfiguration.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="25108de3ae9921c47ae2f4897e0fb75b" name="test/fixtures/project/apps/frontend/config/routing.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="43e0ff3a33ac86478b3f9a769a848bfb" name="test/fixtures/project/apps/frontend/config/security.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="77ab5048d77d1c76b09e1d0b9a6cffa0" name="test/fixtures/project/apps/frontend/config/settings.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="286ac00a00fb38da71776405238fa152" name="test/fixtures/project/apps/frontend/config/view.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="215548048bbbdd100411afc00252a797" name="test/fixtures/project/apps/frontend/lib/myUser.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="d837c335564e5079f50bdfe2cd93a6e6" name="test/fixtures/project/apps/frontend/templates/layout.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="b91fe9f588efe96f91ff1f2c666fa2e3" name="test/fixtures/project/config/ProjectConfiguration.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="e92cbb54e33fbbce0b06f9b36eaa6e7e" name="test/fixtures/project/config/properties.ini" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="78ae708496b5f45951a083f26704d03d" name="test/fixtures/project/config/rsync_exclude.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d1477bd2dcd946041a7b7f948a2aa81d" name="test/fixtures/project/data/fixtures/fixtures.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="9571dce5025587f89468f63e1af20c5e" name="test/fixtures/project/lib/form/BaseForm.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="9351bf99d8167cd9b73119625341e637" name="test/fixtures/project/test/bootstrap/functional.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="ef14875d3a428204d066f5a4cea1a659" name="test/fixtures/project/test/bootstrap/unit.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="58358960364e26d020c98d05aa8f27ad" name="test/fixtures/project/web/robots.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="test/fixtures/project/web/css/main.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="LICENSE" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="e30ed20942874938e3ede748723e656f" name="README" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="fff530b865845412fc61549ed1f22b22" name="README.md" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.3.0</min>
+    <max>1.5.0</max>
+    <exclude>1.5.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-11-22</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+Initial release
+   </notes>
+  </release>
+ </changelog>
+</package>
