@@ -63,7 +63,6 @@ Initial release
    <file baseinstalldir="/dev/null" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="test/fixtures/project/web/css/main.css" role="data" />
    <file baseinstalldir="/dev/null" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="LICENSE" role="data" />
    <file baseinstalldir="/dev/null" md5sum="e30ed20942874938e3ede748723e656f" name="README" role="data" />
-   <file baseinstalldir="/dev/null" md5sum="fff530b865845412fc61549ed1f22b22" name="README.md" role="data" />
   </dir>
  </contents>
  <dependencies>
