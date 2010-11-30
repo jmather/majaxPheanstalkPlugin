@@ -3,6 +3,7 @@
 abstract class majaxPheanstalkWorkerThread {
   
   protected $memory_limit = 100000000;
+  protected $sleep_ms = 100000;
 
   private $path;
 
@@ -11,8 +12,14 @@ abstract class majaxPheanstalkWorkerThread {
     $this->log('starting');
 
     $this->pheanstalk = majaxPheanstalk::getInstance();
+
+    $this->doInit();
   }
    
+  protected function doInit() {
+    // placeholder for subclasses
+  }
+
   public function __destruct() {
     $this->log('ending');
   }
@@ -38,7 +45,7 @@ abstract class majaxPheanstalkWorkerThread {
         exit;
       }
 
-      usleep(10);
+      usleep($this->sleep_ms);
     }
   }
 
