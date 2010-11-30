@@ -13,11 +13,11 @@
   <email>jmather@itsmajax.com</email>
   <active>yes</active>
  </lead>
- <date>2010-11-22</date>
- <time>13:07:53</time>
+ <date>2010-11-30</date>
+ <time>13:00:00</time>
  <version>
-  <release>1.0.0</release>
-  <api>1.0.0</api>
+  <release>1.0.1</release>
+  <api>1.0.1</api>
  </version>
  <stability>
   <release>stable</release>
@@ -97,6 +97,21 @@ Initial release
    <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
    <notes>
 Initial release
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-11-30</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+Added a way to specifiy the time between cycles, and to add initializing code to the workers.
    </notes>
   </release>
  </changelog>
