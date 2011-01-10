@@ -4,26 +4,40 @@ abstract class majaxPheanstalkWorkerThread {
   
   protected $memory_limit = 100000000;
   protected $sleep_ms = 100000;
+  protected $enable_pheanstalk = true;
 
   private $path;
 
   public function __construct($path) {
     $this->setBasePath($path);
     $this->log('starting');
+    $this->doConstruct();
 
-    $this->pheanstalk = majaxPheanstalk::getInstance();
+    if ($this->enable_pheanstalk)
+      $this->pheanstalk = majaxPheanstalk::getInstance();
+  }
 
+  protected function doConstruct()
+  {
+    // placeholder for subclasses
+    // Legacy support
     $this->doInit();
   }
-   
   protected function doInit() {
     // placeholder for subclasses
+    // depreciated.
   }
 
   public function __destruct() {
+    $this->doDestruct();
     $this->log('ending');
   }
-  
+
+  protected function doDestruct()
+  {
+    // placeholder for subclasses
+  }
+
   private function setBasePath($path) {
     $this->path = $path;
   }
@@ -56,17 +70,23 @@ abstract class majaxPheanstalkWorkerThread {
   
   protected function getJob($pipe)
   {
-    return $this->pheanstalk->watch($pipe)->ignore('default')->reserve();
+    if ($this->enable_pheanstalk)
+      return $this->pheanstalk->watch($pipe)->ignore('default')->reserve();
+    throw new Exception('Pheanstalk is not enabled.');
   }
 
   protected function deleteJob($job)
   {
-    return $this->pheanstalk->delete($job);
+    if ($this->enable_pheanstalk)
+      return $this->pheanstalk->delete($job);
+    throw new Exception('Pheanstalk is not enabled.');
   }
 
   protected function buryJob($job)
   {
-    return $this->pheanstalk->bury($job);
+    if ($this->enable_pheanstalk)
+      return $this->pheanstalk->bury($job);
+    throw new Exception('Pheanstalk is not enabled.');
   }
 
   private function log($txt) {

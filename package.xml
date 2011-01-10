@@ -13,11 +13,11 @@
   <email>jmather@itsmajax.com</email>
   <active>yes</active>
  </lead>
- <date>2010-11-30</date>
- <time>13:00:00</time>
+ <date>2011-01-10</date>
+ <time>14:45:00</time>
  <version>
-  <release>1.0.1</release>
-  <api>1.0.1</api>
+  <release>1.1.0</release>
+  <api>1.1.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -25,7 +25,7 @@
  </stability>
  <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
  <notes>
-Initial release
+Added a destruction method for cleanup of subclasses and another option for handling.
  </notes>
  <contents>
   <dir baseinstalldir="/dev/null" name="/">
@@ -112,6 +112,21 @@ Initial release
    <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
    <notes>
 Added a way to specifiy the time between cycles, and to add initializing code to the workers.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.1.0</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2011-01-10</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+Added a destruction method for cleanup of subclasses and another option for handling.
    </notes>
   </release>
  </changelog>
