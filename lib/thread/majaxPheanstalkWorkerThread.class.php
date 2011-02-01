@@ -90,7 +90,7 @@ abstract class majaxPheanstalkWorkerThread {
   }
 
   private function log($txt) {
-    file_put_contents($this->path . '/worker.txt', $txt . "\n", FILE_APPEND);
+    file_put_contents(sfConfig::get('sf_log_dir').'/daemon-'.get_class($this).'.txt', $txt . "\n", FILE_APPEND);
   }
 }
 
