@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Pheanstalk Worker task
+ *
+ * @package majaxPheanstalkPlugin
+ */
 class pheanstalkRunWorkerTask extends sfBaseTask
 {
   protected function configure()
@@ -12,6 +16,7 @@ class pheanstalkRunWorkerTask extends sfBaseTask
     ));
 
     $this->addOptions(array(
+      new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name','frontend'),
       new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'dev'),
       new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'doctrine'),
       // add your own options here
@@ -34,11 +39,12 @@ EOF;
     $databaseManager = new sfDatabaseManager($this->configuration);
     $connection = $databaseManager->getDatabase($options['connection'])->getConnection();
 
-    // add your code here
+    // Create a context from the config
+    $context = sfContext::createInstance($this->configuration);
 
     $worker_class = $arguments['worker_class'];
     $log_path = $arguments['log_path'];
-    $thread = new $worker_class($log_path);
+    $thread = new $worker_class($log_path, $this);
     if (!($thread instanceof majaxPheanstalkWorkerThread))
       throw new InvalidArgumentException('Class supplied was not a majaxPheanstalkWorkerThread child');
 
