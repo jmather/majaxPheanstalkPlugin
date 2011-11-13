@@ -1,0 +1,6 @@
+all:
+  pheanstalk:
+    host:       127.0.0.1
+    port:       11300
+    # Set this if you've moved your pheanstalk library path
+    # path:       %SF_LIB_DIR%/vendor/pheanstalk
